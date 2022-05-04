@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import NavBar from "./NavBar";
+import InputSection from "./inputSection";
+import RefTuturial from "./useRef";
+import UseEffectTutorial from "./useEffect";
+import ImparativeHandle from "./ImparativeHandle";
+import ContextTutorial from "./ContextTutorial";
+import UserContext from "./ContextTutorial";
+import { useState } from "react";
 function App() {
+  const [] = useState("");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserContext.Provider value="hello" />
+      <NavBar />
+      <InputSection />
+      <RefTuturial />
+      <UseEffectTutorial />
+      <ContextTutorial />
+      <UserContext.Provider />
     </div>
   );
 }

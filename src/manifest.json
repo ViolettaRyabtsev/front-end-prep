@@ -1,0 +1,5 @@
+[
+  { "title": "Home", "submenu": ["1", "2", "3"] },
+  { "title": "About", "submenu": ["3", "4", "5"] },
+  { "title": "Contact us", "submenu": ["6", "7", "8"] }
+]
