@@ -1,32 +1,16 @@
-.submenu li:hover {
-  background-color: aqua;
-}
-.submenu {
-  visibility: hidden;
-  height: 200px;
-  z-index: 3;
-  position: absolute;
-  background-color: red;
+
+
+.dropdown-menu{
+position: absolute;
+width: 500px;
+
+
 }
 
-.submenu ul {
-  direction: none;
-  margin-left: 1px;
-}
+.dropdown-menu h2:hover .dropdown-menu {
 
-.dropdown-menu {
-  display: inline-block;
-}
 
-.navbar-nav {
-  border-bottom: 1px solid black;
-}
-
-li {
-  margin-left: 20px;
-}
-
-.dropdown-menu:hover .submenu {
   visibility: visible;
-  display: flex;
+
 }
+

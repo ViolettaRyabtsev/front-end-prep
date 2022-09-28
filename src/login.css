@@ -1,0 +1,48 @@
+form input{
+box-sizing: border-box;
+padding: 10px; 
+margin: 10px ; 
+border: 2px solid red;
+border: 0; 
+border-bottom: 1px solid blue;
+box-shadow: 0 0 15px 4px  rgba(0,0,0,0.06);
+border-radius: 10px;
+width: 100%;
+font-family: inherit;
+font-size: inherit;
+
+}
+
+
+
+input{
+    resize: vertical;
+    border-radius: 15px;
+    padding: 20px; 
+    opacity: 0.8;
+    
+}
+
+input:focus{
+    background-color: #ffd969;
+    border-color: #000;
+}
+
+form .body{
+grid-column-start: 1;
+grid-column-end: 3;
+
+}
+
+form .address{
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+form button{
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+}

@@ -1,0 +1,12 @@
+.list-item-container-show{
+
+background-color: aqua;
+width: 500px;
+display: grid;
+
+
+}
+
+nav li:hover{
+color: blue;
+}

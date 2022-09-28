@@ -15,19 +15,20 @@ const InputSection = () => {
   const [state, dispatch] = useReducer(reducer, { text: "", show: true });
   const [data, setData] = useState([]);
 
-
-
   useEffect(() => {
     console.log("hello world");
     async function getApi() {
       axios
-        .get("https://jsonplaceholder.typicode.com/comments")
+        .get("https://jsonplaceholder.typicode.com/comments", {
+          params: {
+            _limit: 10,
+          },
+        })
         .then((response) => {
-          console.log(response.data);
-          setData(...data, ...response.data);
+          console.log(response.data, "response");
+          setData([...data, ...response.data]);
         });
     }
-
     getApi();
     console.log(data, "data");
   }, []);
@@ -43,8 +44,19 @@ const InputSection = () => {
             dispatch({ type: "POST", payload: false });
           }}
         ></input>
-        <button>submit</button>
+        <button data-testid="data-from-api" onClick={alert("clicked")}>
+          submit
+        </button>
       </form>
+      <div>
+        {data.map((item) => {
+          return (
+            <ul>
+              <li>{item.name}</li>
+            </ul>
+          );
+        })}
+      </div>
     </div>
   );
 };
